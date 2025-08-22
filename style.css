@@ -78,7 +78,9 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
-}#teaching-area {
+}
+
+#teaching-area {
   margin-bottom: 30px;
 }
 
