@@ -1,0 +1,191 @@
+/* Make page fill screen and use clean fonts */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+/* Number line layout: horizontal row */
+.number-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 60px auto 40px;
+  padding-bottom: 40px;
+  border-bottom: 3px solid black;
+  max-width: 95vw;
+  overflow-x: auto;
+}
+
+/* Each tick mark container */
+.tick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 50px;
+}
+
+/* The vertical tick on top of the line */
+.tick::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  height: 40px;
+  border-left: 2px solid black;
+}
+
+/* Number above each tick (0–12) */
+.tick-label {
+  position: absolute;
+  top: -60px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Answer input */
+.cell input {
+  width: 50px;
+  padding: 4px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Times table question underneath */
+.question {
+  font-size: 12px;
+  margin-top: 5px;
+
+}
+/* Chrome, Safari, Edge */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}#teaching-area {
+  margin-bottom: 30px;
+}
+
+#speech-bubble {
+  display: inline-block;
+  background: #fffbea;
+  border: 2px solid #555;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto 10px;
+  font-size: 16px;
+}
+
+/* Highlighted input */
+.highlight {
+  border: 3px solid #0077ff !important;
+}
+
+/* Placeholder text styling for faded numbers */
+input::placeholder {
+  color: #ccc;
+  font-weight: normal;
+  opacity: 1;
+}
+
+/* Hidden inputs in memory mode */
+input[style*="visibility: hidden"] {
+  visibility: hidden !important;
+}
+#intro-section {
+  margin-bottom: 30px;
+}
+
+#intro-bubble {
+  display: inline-block;
+  background: #e7f0ff;
+  border: 2px solid #0077ff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto 10px;
+  font-size: 16px;
+}
+
+#times-table-select {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 2px solid #0077ff;
+  border-radius: 5px;
+  background: white;
+  margin-left: 10px;
+}
+
+#start-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  margin-top: 10px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#start-button:hover {
+  background: #0056cc;
+}
+
+/* Teaching arrows */
+.teaching-arrow {
+  position: absolute;
+  height: 30px;
+  z-index: 10;
+}
+
+.arrow-line {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 2px;
+  background: #ff6b35;
+  border-radius: 1px;
+}
+
+.arrow-line::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: -4px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid #ff6b35;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.arrow-label {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff6b35;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+}
