@@ -471,6 +471,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Set initial intro message
   const introBubble = document.getElementById("intro-bubble");
   if (introBubble) {
-    introBubble.textContent = `Let's start learning the ${timesTable} times table!`;
+    introBubble.textContent = "Let's start learning the " + timesTable + " times table!";
   }
 });
